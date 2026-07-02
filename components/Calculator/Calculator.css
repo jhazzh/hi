@@ -1,0 +1,142 @@
+.calc-page {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+}
+
+.calc-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 36px 88px;
+  animation: fadeUp .7s cubic-bezier(.2, .7, .3, 1) both;
+}
+
+.calc-titleblock {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.calc-kicker {
+  font-size: 12.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+.calc-title {
+  font-family: 'Newsreader', serif;
+  font-weight: 360;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.calc-device {
+  width: 360px;
+  max-width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 1px 2px rgba(26, 26, 23, .04), 0 18px 48px -28px rgba(26, 26, 23, .22);
+  overflow: hidden;
+}
+
+.calc-screen {
+  padding: 30px 26px 22px;
+  text-align: right;
+  min-height: 118px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.calc-history {
+  font-size: 15px;
+  color: var(--faint);
+  min-height: 20px;
+  letter-spacing: 0.01em;
+  font-variant-numeric: tabular-nums;
+  word-break: break-all;
+}
+
+.calc-display {
+  font-size: 52px;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  word-break: break-all;
+}
+
+.calc-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border-top: 1px solid var(--line);
+}
+
+.key {
+  border: none;
+  background: var(--surface);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 23px;
+  font-weight: 400;
+  padding: 22px 0;
+  cursor: pointer;
+  transition: background .18s;
+}
+
+.key:hover { background: var(--surface-3); }
+.key:active { background: var(--surface-4); }
+
+.key--fn {
+  background: var(--surface-2);
+  color: var(--text-3);
+  font-size: 22px;
+}
+
+.key--fn:hover { background: var(--surface-4); }
+.key--fn:active { background: var(--surface-4); }
+
+/* AC is the accent fn key */
+.key--fn:first-child { color: var(--accent); }
+
+.key--op {
+  color: var(--accent);
+  font-size: 24px;
+}
+
+.key--zero { grid-column: span 2; }
+
+.key--eq {
+  background: var(--accent);
+  color: var(--surface);
+  font-size: 26px;
+}
+
+.key--eq:hover { background: var(--accent-strong); }
+.key--eq:active { background: var(--accent-strong); }
+
+.calc-tip {
+  font-size: 13px;
+  color: var(--faint);
+  margin: 26px 0 0;
+  letter-spacing: 0.02em;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}

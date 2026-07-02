@@ -1,0 +1,198 @@
+$accent: var(--accent);
+
+.md-page {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+}
+
+.md-main {
+  /* width + centering come from the shared .page wrapper */
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 0 56px;
+  animation: fadeUp .7s cubic-bezier(.2, .7, .3, 1) both;
+}
+
+.md-titleblock { margin-bottom: 32px; }
+
+.md-kicker {
+  font-size: 12.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
+.md-title {
+  font-family: 'Newsreader', serif;
+  font-weight: 360;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.md-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: stretch;
+  min-height: 540px;
+}
+
+.md-pane {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(26, 26, 23, .04), 0 18px 48px -32px rgba(26, 26, 23, .2);
+}
+
+.md-pane-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.md-pane-label {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.md-reset {
+  border: 1px solid var(--border-2);
+  background: var(--surface);
+  color: var(--text-3);
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  padding: 5px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background .18s;
+
+  &:hover { background: var(--surface-3); }
+}
+
+.md-editor {
+  flex: 1;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 22px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-2);
+  background: var(--surface);
+  min-height: 420px;
+}
+
+.md-preview {
+  flex: 1;
+  padding: 26px 28px;
+  overflow-y: auto;
+}
+
+.md-out {
+  > *:first-child { margin-top: 0; }
+  > *:last-child { margin-bottom: 0; }
+
+  h1, h2, h3 {
+    font-family: 'Newsreader', serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin: 1.2em 0 .5em;
+  }
+  h1 { font-size: 30px; }
+  h2 { font-size: 23px; }
+  h3 { font-size: 19px; }
+
+  p {
+    font-size: 15.5px;
+    line-height: 1.62;
+    color: var(--text-2);
+    margin: 0 0 1em;
+  }
+
+  a {
+    color: var(--accent-strong);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-soft);
+  }
+
+  strong { font-weight: 600; color: var(--text); }
+  em { font-style: italic; }
+
+  code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    background: var(--surface-4);
+    padding: 2px 6px;
+    border-radius: 5px;
+    color: var(--code);
+  }
+
+  pre {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    overflow-x: auto;
+    margin: 0 0 1em;
+
+    code {
+      background: none;
+      padding: 0;
+      color: var(--text-2);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+  }
+
+  ul, ol { margin: 0 0 1em; padding-left: 22px; }
+  li { font-size: 15.5px; line-height: 1.62; color: var(--text-2); margin: 0 0 .3em; }
+
+  blockquote {
+    border-left: 3px solid $accent;
+    margin: 0 0 1em;
+    padding: 4px 0 4px 18px;
+    color: var(--text-3);
+    font-style: italic;
+  }
+
+  hr { border: none; border-top: 1px solid var(--line); margin: 1.6em 0; }
+
+  table { border-collapse: collapse; margin: 0 0 1em; font-size: 14px; }
+  th, td { border: 1px solid var(--line); padding: 7px 12px; text-align: left; }
+  th { background: var(--surface-2); font-weight: 600; }
+}
+
+.md-tip {
+  font-size: 13px;
+  color: var(--faint);
+  margin: 22px 0 0;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 780px) {
+  .md-grid { grid-template-columns: 1fr; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}

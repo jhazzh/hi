@@ -1,0 +1,279 @@
+/* Portfolio.dc — landing page. Uses the site theme tokens so it follows the
+ * light/dark toggle (accent = --accent). */
+
+.pf {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding: 0 clamp(20px, 6vw, 88px);
+  transition: background-color .3s ease, color .3s ease;
+}
+
+.pf__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Header */
+.pf__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Right room so the fixed ThemeToggle button never overlaps the status. */
+  padding: 34px 52px 0 0;
+}
+
+.pf__brand {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.pf__brand-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+  background: var(--accent);
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+.pf__status {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.pf__status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent);
+  display: inline-block;
+  animation: pf-blink 1.8s ease-in-out infinite;
+}
+
+/* Hero */
+.pf__hero {
+  padding: clamp(88px, 15vh, 168px) 0 clamp(48px, 7vh, 84px);
+  max-width: 760px;
+}
+
+.pf__eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 34px;
+}
+
+.pf__title {
+  font-family: 'Newsreader', serif;
+  font-weight: 300;
+  font-size: clamp(42px, 7vw, 78px);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  margin: 0 0 30px;
+  text-wrap: balance;
+  color: var(--text);
+}
+
+.pf__lead {
+  font-size: clamp(17px, 2.1vw, 21px);
+  line-height: 1.55;
+  color: var(--text-2);
+  max-width: 560px;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/* Projects list */
+.pf__projects-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.pf__label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.pf__count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.pf__row {
+  display: grid;
+  grid-template-columns: 48px minmax(140px, 1fr) minmax(0, 1.6fr) auto 26px;
+  align-items: center;
+  gap: 28px;
+  padding: 26px 20px;
+  /* Marker is a bottom border whose colour swaps on hover — no size change,
+   * so no layout shift (CLS). */
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  position: relative;
+  background: transparent;
+  transition: background .3s, border-color .3s;
+}
+
+/* Hover only on devices with a real pointer (skip sticky touch hover). */
+@media (hover: hover) {
+  .pf__row:hover {
+    background: var(--surface-2);
+    border-bottom-color: var(--accent);
+    box-shadow: inset 3px 0 0 0 var(--accent);
+  }
+  .pf__row:hover .pf__index { color: var(--accent); }
+  .pf__row:hover .pf__arrow {
+    color: var(--accent);
+    transform: translateX(4px);
+  }
+}
+
+.pf__index {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  transition: color .3s;
+}
+
+.pf__name {
+  font-size: clamp(20px, 2.6vw, 26px);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+
+.pf__desc {
+  font-size: 14.5px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.pf__tags {
+  display: flex;
+  gap: 7px;
+  justify-self: start;
+  flex-wrap: wrap;
+}
+
+.pf__tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  border: 1px solid var(--border-2);
+  border-radius: 999px;
+  padding: 4px 11px;
+  white-space: nowrap;
+}
+
+.pf__arrow {
+  font-size: 19px;
+  justify-self: end;
+  color: var(--faint);
+  transform: translateX(0);
+  transition: transform .3s, color .3s;
+}
+
+/* Footer */
+.pf__footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  /* Extra right + bottom room so the fixed BackToTop button never overlaps. */
+  padding: 56px 76px 48px 0;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Footer link — full state set (LVHA order). */
+.pf__footer-link:link,
+.pf__footer-link:visited {
+  color: var(--text-2);
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.pf__footer-link:hover,
+.pf__footer-link:focus-visible {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.pf__footer-link:active {
+  color: var(--accent);
+}
+
+/* Project rows — hover handled by :hover (CSS); add visited + press + focus. */
+.pf__row:visited {
+  color: inherit;
+}
+
+.pf__row:active {
+  background: var(--surface-2);
+}
+
+.pf__row:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+@keyframes pf-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .25; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pf *,
+  .pf {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Mobile: stack the 5-col row into a readable block. */
+@media not all and (min-width: 640px) {
+  .pf__row {
+    grid-template-columns: auto 1fr;
+    gap: 6px 14px;
+    padding: 22px 4px;
+  }
+  .pf__index { grid-row: 1; }
+  .pf__name { grid-column: 2; }
+  .pf__desc,
+  .pf__tags { grid-column: 1 / -1; }
+  .pf__arrow { display: none; }
+
+  /* Footer stacks on mobile — drop the desktop right clearance, add bottom. */
+  .pf__footer { padding: 48px 0 88px; }
+}
