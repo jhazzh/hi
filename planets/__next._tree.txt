@@ -1,4 +1,4 @@
 :HL["/hi/_next/static/chunks/2-k602n41ci2w.css","style"]
 :HL["/hi/_next/static/chunks/22r_ma4hu0ekg.css","style"]
 :HL["/hi/theme.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":20,"slots":{"children":{"name":"planets","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"WmC1NWDNsuspTTmvTAw-9"}
+0:{"tree":{"name":"","param":null,"prefetchHints":20,"slots":{"children":{"name":"planets","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"m_wQLva5P-1pY1KGbHbyk"}
