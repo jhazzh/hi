@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1900" viewBox="0 0 1440 1900" font-family="Space Grotesk, sans-serif">
+  <!-- Northbeam — importable design source. Drag into Figma: groups become
+       frames, <text> stays editable. Palette matches northbeam theme style.css. -->
+  <rect width="1440" height="1900" fill="#0c0e12"/>
+
+  <g id="nav" transform="translate(140,40)">
+    <text x="0" y="34" fill="#f2f4f8" font-size="19" font-weight="600">Northbeam<tspan fill="#4f7cff">.</tspan></text>
+    <text x="640" y="32" fill="#8a93a3" font-size="15">Services</text>
+    <text x="740" y="32" fill="#8a93a3" font-size="15">Process</text>
+    <text x="840" y="32" fill="#8a93a3" font-size="15">Contact</text>
+    <g id="pill"><rect x="1000" y="10" width="160" height="42" rx="21" fill="none" stroke="#232833"/><text x="1080" y="36" fill="#f2f4f8" font-size="14" text-anchor="middle">Start a project</text></g>
+  </g>
+
+  <g id="hero" transform="translate(140,220)">
+    <text x="0" y="0" fill="#6d92ff" font-size="12" letter-spacing="3">DIGITAL STUDIO — EST. 2019</text>
+    <text x="-6" y="120" fill="#f2f4f8" font-size="104" font-weight="500" letter-spacing="-3">Websites that work</text>
+    <text x="-6" y="230" fill="#6d92ff" font-size="104" font-family="Newsreader, serif" font-style="italic" font-weight="300">as good as they look.</text>
+    <text x="0" y="310" fill="#8a93a3" font-size="20">We design in Figma and build in code — WordPress, Shopify, or</text>
+    <text x="0" y="340" fill="#8a93a3" font-size="20">standalone HTML — for brands that care about both halves.</text>
+    <g id="cta"><rect x="0" y="390" width="220" height="56" rx="28" fill="#4f7cff"/><text x="110" y="425" fill="#ffffff" font-size="16" text-anchor="middle">Start a project →</text></g>
+  </g>
+
+  <g id="services" transform="translate(140,760)">
+    <line x1="0" y1="-40" x2="1160" y2="-40" stroke="#232833"/>
+    <text x="0" y="0" fill="#8a93a3" font-size="12" letter-spacing="2">WHAT WE DO</text>
+    <g transform="translate(0,30)" fill="#13161d">
+      <g id="svc-1"><rect width="276" height="180" rx="14" stroke="#232833"/><text x="24" y="40" fill="#6d92ff" font-size="12">01</text><text x="24" y="72" fill="#f2f4f8" font-size="18">Web design</text><text x="24" y="104" fill="#8a93a3" font-size="14">Interfaces designed in Figma —</text><text x="24" y="124" fill="#8a93a3" font-size="14">from wireframe to a system.</text></g>
+      <g id="svc-2" transform="translate(295,0)"><rect width="276" height="180" rx="14" stroke="#232833"/><text x="24" y="40" fill="#6d92ff" font-size="12">02</text><text x="24" y="72" fill="#f2f4f8" font-size="18">Development</text><text x="24" y="104" fill="#8a93a3" font-size="14">Fast, accessible builds:</text><text x="24" y="124" fill="#8a93a3" font-size="14">WordPress, Shopify, HTML.</text></g>
+      <g id="svc-3" transform="translate(590,0)"><rect width="276" height="180" rx="14" stroke="#232833"/><text x="24" y="40" fill="#6d92ff" font-size="12">03</text><text x="24" y="72" fill="#f2f4f8" font-size="18">E-commerce</text><text x="24" y="104" fill="#8a93a3" font-size="14">Storefronts that convert —</text><text x="24" y="124" fill="#8a93a3" font-size="14">product, checkout, CRO.</text></g>
+      <g id="svc-4" transform="translate(885,0)"><rect width="276" height="180" rx="14" stroke="#232833"/><text x="24" y="40" fill="#6d92ff" font-size="12">04</text><text x="24" y="72" fill="#f2f4f8" font-size="18">Brand</text><text x="24" y="104" fill="#8a93a3" font-size="14">Naming, identity and voice</text><text x="24" y="124" fill="#8a93a3" font-size="14">that survive the real world.</text></g>
+    </g>
+  </g>
+
+  <g id="process" transform="translate(140,1130)">
+    <line x1="0" y1="-40" x2="1160" y2="-40" stroke="#232833"/>
+    <text x="0" y="0" fill="#8a93a3" font-size="12" letter-spacing="2">HOW IT WORKS</text>
+    <g transform="translate(0,40)">
+      <g id="step-1"><circle cx="17" cy="17" r="17" fill="none" stroke="#4f7cff"/><text x="17" y="22" fill="#6d92ff" font-size="13" text-anchor="middle">1</text><text x="0" y="70" fill="#f2f4f8" font-size="19">Discover</text><text x="0" y="100" fill="#8a93a3" font-size="14">One workshop. We map goals,</text><text x="0" y="120" fill="#8a93a3" font-size="14">users, and what 'done' means.</text></g>
+      <g id="step-2" transform="translate(390,0)"><circle cx="17" cy="17" r="17" fill="none" stroke="#4f7cff"/><text x="17" y="22" fill="#6d92ff" font-size="13" text-anchor="middle">2</text><text x="0" y="70" fill="#f2f4f8" font-size="19">Design</text><text x="0" y="100" fill="#8a93a3" font-size="14">Figma prototypes you can click</text><text x="0" y="120" fill="#8a93a3" font-size="14">— reviewed together, weekly.</text></g>
+      <g id="step-3" transform="translate(780,0)"><circle cx="17" cy="17" r="17" fill="none" stroke="#4f7cff"/><text x="17" y="22" fill="#6d92ff" font-size="13" text-anchor="middle">3</text><text x="0" y="70" fill="#f2f4f8" font-size="19">Ship</text><text x="0" y="100" fill="#8a93a3" font-size="14">Built, tested, launched. Then</text><text x="0" y="120" fill="#8a93a3" font-size="14">measured and improved.</text></g>
+    </g>
+  </g>
+
+  <g id="metrics" transform="translate(140,1480)">
+    <line x1="0" y1="-40" x2="1160" y2="-40" stroke="#232833"/>
+    <g text-anchor="middle">
+      <g><text x="130" y="50" fill="#6d92ff" font-size="56" font-weight="500">38</text><text x="130" y="80" fill="#8a93a3" font-size="13">sites shipped</text></g>
+      <g><text x="420" y="50" fill="#6d92ff" font-size="56" font-weight="500">97</text><text x="420" y="80" fill="#8a93a3" font-size="13">avg. Lighthouse score</text></g>
+      <g><text x="710" y="50" fill="#6d92ff" font-size="56" font-weight="500">6</text><text x="710" y="80" fill="#8a93a3" font-size="13">weeks median launch</text></g>
+      <g><text x="1000" y="50" fill="#6d92ff" font-size="56" font-weight="500">92%</text><text x="1000" y="80" fill="#8a93a3" font-size="13">clients return</text></g>
+    </g>
+  </g>
+
+  <g id="cta-band" transform="translate(720,1680)">
+    <line x1="-580" y1="-40" x2="580" y2="-40" stroke="#232833"/>
+    <text x="0" y="30" fill="#f2f4f8" font-size="52" font-weight="500" text-anchor="middle">Have a project in mind?</text>
+    <text x="0" y="70" fill="#8a93a3" font-size="16" text-anchor="middle">Tell us what you are building — we reply within one working day.</text>
+    <g transform="translate(-130,95)"><rect width="260" height="52" rx="26" fill="#ffffff"/><text x="130" y="33" fill="#0c0e12" font-size="15" text-anchor="middle">hello@northbeam.studio</text></g>
+  </g>
+</svg>

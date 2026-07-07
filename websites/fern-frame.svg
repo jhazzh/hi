@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="2100" viewBox="0 0 1440 2100" font-family="Space Grotesk, sans-serif">
+  <!-- Fern & Frame — importable design source. Drag into Figma: groups become
+       frames, <text> stays editable. Palette matches assets/fern-frame.css. -->
+  <defs>
+    <linearGradient id="ff-chair" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dfd8c4"/><stop offset="1" stop-color="#c9c2a8"/>
+    </linearGradient>
+    <linearGradient id="ff-sofa" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#cdd8c4"/><stop offset="1" stop-color="#a9bda0"/>
+    </linearGradient>
+    <linearGradient id="ff-table" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e4d4bd"/><stop offset="1" stop-color="#cbb493"/>
+    </linearGradient>
+    <linearGradient id="ff-lamp" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9ddca"/><stop offset="1" stop-color="#d8b993"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="2100" fill="#f6f1e7"/>
+
+  <g id="announcement">
+    <rect width="1440" height="44" fill="#274427"/>
+    <text x="720" y="28" fill="#f6f1e7" font-size="14" text-anchor="middle" letter-spacing="0.5">Free delivery across the EU on orders over €300</text>
+  </g>
+
+  <g id="nav" transform="translate(160,44)">
+    <text x="0" y="70" fill="#22301f" font-size="26" font-family="Newsreader, serif" font-weight="500">Fern&amp;Frame</text>
+    <text x="520" y="66" fill="#22301f" font-size="16">Shop</text>
+    <text x="600" y="66" fill="#22301f" font-size="16">Craft</text>
+    <text x="680" y="66" fill="#22301f" font-size="16">Stories</text>
+    <g id="cart"><rect x="1000" y="44" width="120" height="42" rx="21" fill="none" stroke="#22301f"/><text x="1060" y="70" fill="#22301f" font-size="15" text-anchor="middle">Cart (0)</text></g>
+  </g>
+
+  <g id="hero" transform="translate(160,230)">
+    <text x="0" y="0" fill="#c4703f" font-size="14" letter-spacing="3">SPRING COLLECTION — 2026</text>
+    <text x="-4" y="90" fill="#22301f" font-size="76" font-family="Newsreader, serif">Furniture for</text>
+    <text x="-4" y="170" fill="#22301f" font-size="76" font-family="Newsreader, serif">slow living.</text>
+    <text x="0" y="240" fill="#6e7a66" font-size="20">Honest materials, quiet forms, and pieces built to be</text>
+    <text x="0" y="270" fill="#6e7a66" font-size="20">kept — designed in Porto, delivered across Europe.</text>
+    <g id="cta">
+      <rect x="0" y="310" width="240" height="56" rx="28" fill="#274427"/><text x="120" y="345" fill="#f6f1e7" font-size="16" text-anchor="middle">Shop the collection</text>
+      <rect x="256" y="310" width="150" height="56" rx="28" fill="none" stroke="#22301f"/><text x="331" y="345" fill="#22301f" font-size="16" text-anchor="middle">Our craft</text>
+    </g>
+    <g id="stats" transform="translate(0,430)">
+      <text x="0" y="0" fill="#22301f" font-size="30" font-family="Newsreader, serif">4.9</text><text x="0" y="26" fill="#6e7a66" font-size="13">avg. rating</text>
+      <text x="150" y="0" fill="#22301f" font-size="30" font-family="Newsreader, serif">12k+</text><text x="150" y="26" fill="#6e7a66" font-size="13">homes furnished</text>
+      <text x="320" y="0" fill="#22301f" font-size="30" font-family="Newsreader, serif">10 yr</text><text x="320" y="26" fill="#6e7a66" font-size="13">guarantee</text>
+    </g>
+    <g id="hero-art" transform="translate(760,-20)">
+      <rect width="440" height="480" rx="200" fill="#efe7d7"/>
+      <circle cx="320" cy="120" r="58" fill="#c4703f" opacity="0.85"/>
+      <rect y="400" width="440" height="80" fill="#274427" opacity="0.12"/>
+      <g fill="#274427" transform="translate(110,230)">
+        <rect width="35" height="170" rx="16"/><rect y="115" width="190" height="30" rx="12"/>
+        <rect x="18" y="140" width="15" height="80" rx="6"/><rect x="160" y="140" width="15" height="80" rx="6"/>
+      </g>
+    </g>
+  </g>
+
+  <g id="shop" transform="translate(160,930)">
+    <text x="0" y="0" fill="#22301f" font-size="36" font-family="Newsreader, serif">The collection</text>
+    <text x="1120" y="0" fill="#c4703f" font-size="15" text-anchor="end">View all →</text>
+    <g transform="translate(0,40)">
+      <g id="card-chair"><rect width="260" height="280" rx="12" fill="url(#ff-chair)"/><rect x="16" y="16" width="60" height="26" rx="13" fill="#22301f"/><text x="46" y="34" fill="#f6f1e7" font-size="11" text-anchor="middle">NEW</text><text x="0" y="315" fill="#22301f" font-size="16">Alder Lounge Chair</text><text x="0" y="340" fill="#6e7a66" font-size="15">€489</text></g>
+      <g id="card-sofa" transform="translate(290,0)"><rect width="260" height="280" rx="12" fill="url(#ff-sofa)"/><rect x="16" y="16" width="96" height="26" rx="13" fill="#22301f"/><text x="64" y="34" fill="#f6f1e7" font-size="11" text-anchor="middle">BESTSELLER</text><text x="0" y="315" fill="#22301f" font-size="16">Moss Linen Sofa</text><text x="0" y="340" fill="#6e7a66" font-size="15">€1,290</text></g>
+      <g id="card-table" transform="translate(580,0)"><rect width="260" height="280" rx="12" fill="url(#ff-table)"/><text x="0" y="315" fill="#22301f" font-size="16">Fen Oak Side Table</text><text x="0" y="340" fill="#6e7a66" font-size="15">€240</text></g>
+      <g id="card-lamp" transform="translate(870,0)"><rect width="260" height="280" rx="12" fill="url(#ff-lamp)"/><rect x="16" y="16" width="80" height="26" rx="13" fill="#22301f"/><text x="56" y="34" fill="#f6f1e7" font-size="11" text-anchor="middle">LAST FEW</text><text x="0" y="315" fill="#22301f" font-size="16">Ripple Floor Lamp</text><text x="0" y="340" fill="#6e7a66" font-size="15">€175</text></g>
+    </g>
+  </g>
+
+  <g id="values" transform="translate(160,1400)">
+    <line x1="0" y1="-40" x2="1120" y2="-40" stroke="#ddd3bf"/>
+    <g><text x="0" y="0" fill="#22301f" font-size="18">Solid wood, certified</text><text x="0" y="30" fill="#6e7a66" font-size="14">Every frame is FSC-certified oak or alder,</text><text x="0" y="50" fill="#6e7a66" font-size="14">finished with natural oils.</text></g>
+    <g transform="translate(380,0)"><text x="0" y="0" fill="#22301f" font-size="18">Made to order</text><text x="0" y="30" fill="#6e7a66" font-size="14">Built in small batches in our Porto</text><text x="0" y="50" fill="#6e7a66" font-size="14">workshop. No warehouses of surplus.</text></g>
+    <g transform="translate(760,0)"><text x="0" y="0" fill="#22301f" font-size="18">10-year guarantee</text><text x="0" y="30" fill="#6e7a66" font-size="14">Joints, frames and finishes — covered</text><text x="0" y="50" fill="#6e7a66" font-size="14">for a decade of daily life.</text></g>
+    <line x1="0" y1="90" x2="1120" y2="90" stroke="#ddd3bf"/>
+  </g>
+
+  <g id="review" transform="translate(720,1620)">
+    <text x="0" y="0" fill="#22301f" font-size="30" font-family="Newsreader, serif" text-anchor="middle">“The sofa arrived in six weeks, exactly as</text>
+    <text x="0" y="42" fill="#22301f" font-size="30" font-family="Newsreader, serif" text-anchor="middle">promised — and it is the first piece guests ask about.”</text>
+    <text x="0" y="90" fill="#6e7a66" font-size="14" text-anchor="middle">— Marta K., Berlin</text>
+  </g>
+
+  <g id="newsletter" transform="translate(0,1780)">
+    <rect width="1440" height="200" fill="#274427"/>
+    <text x="720" y="80" fill="#f6f1e7" font-size="36" font-family="Newsreader, serif" text-anchor="middle">Slow news, monthly.</text>
+    <text x="720" y="115" fill="#f6f1e7" font-size="16" text-anchor="middle" opacity="0.8">New pieces, workshop stories, and early access to small batches.</text>
+    <rect x="540" y="140" width="260" height="44" rx="22" fill="none" stroke="#f6f1e7" opacity="0.4"/><text x="560" y="167" fill="#f6f1e7" font-size="15" opacity="0.55">you@email.com</text>
+    <rect x="810" y="140" width="130" height="44" rx="22" fill="#f6f1e7"/><text x="875" y="167" fill="#274427" font-size="15" text-anchor="middle">Subscribe</text>
+  </g>
+
+  <g id="footer" transform="translate(720,2040)">
+    <text x="0" y="0" fill="#22301f" font-size="22" font-family="Newsreader, serif" text-anchor="middle">Fern&amp;Frame</text>
+    <text x="0" y="30" fill="#6e7a66" font-size="12" text-anchor="middle">A website design demo — designed &amp; built by jhazzh.</text>
+  </g>
+</svg>
