@@ -1,0 +1,29 @@
+/* Global link styling — base states for every <a> (LVHA order + focus).
+ * Uses theme tokens so it follows light/dark. Components can still override. */
+a:link,
+a:visited {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color .2s;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--accent-strong);
+}
+
+a:active {
+  color: var(--text);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+@media not all and (min-width: 601px) {
+  body {
+    font-size: 15px;
+  }
+}

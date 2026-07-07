@@ -1,0 +1,265 @@
+$accent: var(--accent);
+
+.pomo-page {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+}
+
+.pomo-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeUp .7s cubic-bezier(.2, .7, .3, 1) both;
+}
+
+.pomo-titleblock {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.pomo-kicker {
+  font-size: 12.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+.pomo-title {
+  font-family: 'Newsreader', serif;
+  font-weight: 360;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.pomo-card {
+  width: 380px;
+  max-width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 1px 2px rgba(26, 26, 23, .04), 0 18px 48px -28px rgba(26, 26, 23, .22);
+  padding: 34px 30px 30px;
+  text-align: center;
+}
+
+.pomo-tabs {
+  display: inline-flex;
+  gap: 6px;
+  background: var(--surface-2);
+  border-radius: 999px;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+
+.pomo-tab {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  padding: 9px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all .2s;
+
+  &--active {
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: 0 1px 3px rgba(26, 26, 23, .12);
+  }
+}
+
+.pomo-dial {
+  position: relative;
+  width: 232px;
+  max-width: 100%;
+  height: 232px;
+  margin: 0 auto 30px;
+}
+
+.pomo-ring {
+  transform: rotate(-90deg);
+  max-width: 100%;
+}
+
+.pomo-progress {
+  transition: stroke-dashoffset .5s linear;
+}
+
+.pomo-dial-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pomo-time {
+  font-size: 56px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.pomo-phase {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.pomo-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.pomo-play {
+  border: none;
+  background: $accent;
+  color: var(--surface);
+  font-family: inherit;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  padding: 13px 38px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background .18s;
+
+  &:hover {
+    background: var(--accent-strong);
+  }
+}
+
+.pomo-reset {
+  border: 1px solid var(--border-2);
+  background: var(--surface);
+  color: var(--text-3);
+  font-family: inherit;
+  font-size: 15px;
+  padding: 13px 22px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background .18s;
+
+  &:hover {
+    background: var(--surface-3);
+  }
+}
+
+.pomo-settings {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+}
+
+.pomo-setting {
+  flex: 1;
+}
+
+.pomo-setting-label {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.pomo-divider {
+  width: 1px;
+  background: var(--line);
+}
+
+.pomo-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  button {
+    border: 1px solid var(--border-2);
+    background: var(--surface);
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--text-3);
+    font-family: inherit;
+    line-height: 1;
+
+    &:hover {
+      background: var(--surface-3);
+    }
+  }
+
+  span {
+    font-size: 18px;
+    font-variant-numeric: tabular-nums;
+    width: 26px;
+  }
+}
+
+.pomo-tip {
+  font-size: 13px;
+  color: var(--faint);
+  margin: 26px 0 0;
+  letter-spacing: 0.02em;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media not all and (min-width: 480px) {
+  .pomo-title {
+    font-size: 30px;
+  }
+
+  .pomo-card {
+    padding: 26px 18px 22px;
+    border-radius: 18px;
+  }
+
+  .pomo-settings {
+    gap: 10px;
+  }
+
+  .pomo-stepper {
+    gap: 8px;
+  }
+
+  .pomo-stepper span {
+    width: auto;
+  }
+
+  .pomo-stepper button {
+    width: 28px;
+    height: 28px;
+  }
+}

@@ -1,0 +1,212 @@
+$accent: var(--accent);
+
+.i18n-page {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  transition: background-color .3s ease, color .3s ease;
+}
+
+.i18n-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeUp .7s cubic-bezier(.2, .7, .3, 1) both;
+}
+
+.i18n-titleblock { text-align: center; margin-bottom: 32px; }
+
+.i18n-kicker {
+  font-size: 12.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+.i18n-title {
+  font-family: 'Newsreader', serif;
+  font-weight: 360;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* Language tabs */
+.i18n-langs {
+  display: inline-flex;
+  gap: 6px;
+  background: var(--surface-4);
+  border-radius: 999px;
+  padding: 5px;
+  margin-bottom: 28px;
+}
+
+.i18n-lang {
+  font-family: inherit;
+  font-size: 14px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  padding: 9px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all .2s;
+
+  &.is-active {
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12);
+  }
+}
+
+/* Storefront card — logical props so dir=rtl mirrors automatically */
+.i18n-store {
+  width: 400px;
+  max-width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04), 0 18px 48px -28px rgba(0, 0, 0, .22);
+  padding: 26px 28px;
+  text-align: start;
+}
+
+.i18n-store-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.i18n-store-name { font-size: 17px; font-weight: 500; }
+
+.i18n-cart {
+  font-size: 13px;
+  color: var(--text-3);
+  background: var(--surface-2);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+
+.i18n-ship-banner {
+  font-size: 12.5px;
+  color: var(--accent);
+  background: var(--chip-bg);
+  border-radius: 10px;
+  padding: 9px 14px;
+  margin-bottom: 20px;
+}
+
+.i18n-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.i18n-product-name { font-size: 19px; font-weight: 500; }
+
+.i18n-price {
+  font-size: 24px;
+  font-weight: 300;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.i18n-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 22px;
+}
+
+.i18n-stars { color: var(--accent); letter-spacing: 2px; font-size: 15px; }
+.i18n-reviews { font-size: 13px; color: var(--muted); }
+
+.i18n-actions { display: flex; gap: 10px; margin-bottom: 18px; }
+
+.i18n-buy {
+  flex: 1;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 12px 0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background .18s;
+
+  &:hover { background: var(--accent-strong); }
+}
+
+.i18n-savebtn {
+  border: 1px solid var(--border-2);
+  background: var(--surface);
+  color: var(--text-3);
+  font-family: inherit;
+  font-size: 14px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background .18s;
+
+  &:hover { background: var(--surface-3); }
+}
+
+.i18n-meta {
+  font-size: 13px;
+  color: var(--muted);
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+/* Country selector */
+.i18n-country {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.i18n-country-label {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.i18n-country-select {
+  font-family: inherit;
+  font-size: 14px;
+  border: 1px solid var(--border-2);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  padding: 9px 14px;
+  cursor: pointer;
+}
+
+.i18n-tip {
+  font-size: 13px;
+  color: var(--faint);
+  margin: 26px 0 0;
+  letter-spacing: 0.02em;
+  max-width: 440px;
+  text-align: center;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}

@@ -1,0 +1,64 @@
+$accent: var(--accent);
+
+.back-to-top-button {
+  // hidden until scrolled; .show fades it in
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 50;
+
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+  padding: 0;
+
+  // hide the literal "^" text, draw a clean arrow instead
+  color: transparent;
+  font-size: 0;
+
+  box-shadow: 0 1px 2px rgba(26, 26, 23, .05), 0 12px 28px -14px rgba(26, 26, 23, .35);
+  transition: opacity .25s ease, transform .25s cubic-bezier(.2, .7, .3, 1),
+    background .18s, box-shadow .18s, border-color .18s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    width: 11px;
+    height: 11px;
+    border-top: 2px solid $accent;
+    border-right: 2px solid $accent;
+    border-radius: 1px;
+    transform: translate(-50%, -50%) rotate(-45deg); // up-arrow chevron
+    transition: border-color .18s;
+  }
+
+  &:hover {
+    background: $accent;
+    border-color: $accent;
+    transform: translateY(-2px);
+    box-shadow: 0 1px 2px rgba(26, 26, 23, .05), 0 16px 32px -12px rgba(38, 70, 160, .5);
+
+    &::before { border-color: var(--surface); }
+  }
+
+  &:active { transform: translateY(0); }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@media print {
+  .back-to-top-button { display: none !important; }
+}

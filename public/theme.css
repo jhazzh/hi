@@ -1,0 +1,61 @@
+/* Shared design tokens for the whole site.
+ * Single source of truth, served at a stable URL (/hi/theme.css) so both the
+ * Next app and the standalone quiz sub-app can link to the same theme.
+ * Light by default; [data-theme="dark"] on <html> flips to dark. */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Newsreader:opsz,wght@6..72,300..500&family=Space+Grotesk:wght@300..600&family=JetBrains+Mono:wght@400;500&display=swap");
+
+/* Palette from the Portfolio.dc design: charcoal canvas + lime accent.
+ * Light mode is a warm off-white variant keeping the same lime. */
+
+:root {
+  --page-max: 1040px;
+  --wrapper-padding-inline: 24px;
+  --bg: #F5F3EC;
+  --surface: #FFFFFF;
+  --surface-2: #ECEAE1;
+  --surface-3: #EFEDE4;
+  --surface-4: #E7E4DA;
+  --text: #141310;
+  --text-2: #45423B;
+  --text-3: #6E6A62;
+  --muted: #8A867C;
+  --faint: #B4B0A6;
+  --border: #D8D4C8;
+  --border-2: #CFCABD;
+  --line: #E3DFD5;
+  --accent: #6B8E12;          /* lime, darkened for contrast on light bg */
+  --accent-strong: #557010;
+  --accent-soft: #E2EFB8;
+  --chip-bg: #EBF3D3;
+  --chip-fg: #4C6410;
+  --code: #8a4b2f;
+  --danger: #b4453f;
+
+  /* Aliases used by the quiz sub-app. */
+  --card: var(--surface);
+  --radius: 14px;
+}
+
+[data-theme="dark"] {
+  --bg: #141310;
+  --surface: #1A1815;
+  --surface-2: #1E1B18;
+  --surface-3: #232019;
+  --surface-4: #0F0E0B;
+  --text: #F5F3EE;
+  --text-2: #B4B0A6;
+  --text-3: #928E85;
+  --muted: #8A867C;
+  --faint: #4A4842;
+  --border: #2A2823;
+  --border-2: #33302A;
+  --line: #221F1B;
+  --accent: #C7F24A;          /* lime */
+  --accent-strong: #D6F96A;
+  --accent-soft: #3A4A16;
+  --chip-bg: #262E12;
+  --chip-fg: #C7F24A;
+  --code: #d99a6c;
+  --danger: #e0726b;
+}

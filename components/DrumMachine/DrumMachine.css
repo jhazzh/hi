@@ -1,0 +1,169 @@
+.dm-page {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+}
+
+.dm-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeUp .7s cubic-bezier(.2, .7, .3, 1) both;
+}
+
+.dm-titleblock { text-align: center; margin-bottom: 38px; }
+
+.dm-kicker {
+  font-size: 12.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+.dm-title {
+  font-family: 'Newsreader', serif;
+  font-weight: 360;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.dm-device {
+  width: 420px;
+  max-width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 1px 2px rgba(26, 26, 23, .04), 0 18px 48px -28px rgba(26, 26, 23, .22);
+  padding: 26px;
+}
+
+.dm-readout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface-2);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 22px;
+}
+
+.dm-readout-label {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.dm-readout-value {
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.dm-pads {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.dm-pad {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 0;
+  aspect-ratio: 1;
+  cursor: pointer;
+  font-family: inherit;
+  touch-action: manipulation; /* no double-tap zoom delay */
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--text);
+  transition: transform .08s ease, background .18s, box-shadow .18s;
+}
+
+.dm-pad:hover { background: var(--surface-3); }
+.dm-pad:active { transform: scale(.95); }
+
+.dm-pad--active {
+  background: var(--accent);
+  color: var(--surface);
+}
+
+.dm-pad--active .dm-pad-name { color: rgba(255, 255, 255, .8); }
+
+.dm-pad-key { font-size: 24px; font-weight: 500; }
+
+.dm-pad-name {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.volume-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin: 4px 0 24px;
+  padding: 0 4px;
+}
+
+.volume-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.volume-bar input {
+  flex: 1;
+  accent-color: var(--accent);
+  height: 4px;
+}
+
+.volume-value {
+  font-size: 13px;
+  color: var(--text-3);
+  width: 30px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.dm-tip {
+  font-size: 13px;
+  color: var(--faint);
+  margin: 26px 0 0;
+  letter-spacing: 0.02em;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (max-width: 480px) {
+  .dm-titleblock { margin-bottom: 26px; }
+  .dm-title { font-size: 30px; }
+  .dm-device { padding: 18px; border-radius: 18px; }
+  .dm-pads { gap: 9px; }
+  .dm-pad { border-radius: 13px; gap: 5px; }
+  .dm-pad-key { font-size: 20px; }
+  .dm-readout { padding: 12px 14px; margin-bottom: 18px; }
+}
