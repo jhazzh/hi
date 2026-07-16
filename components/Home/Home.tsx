@@ -38,11 +38,22 @@ const Home = () => {
           </div>
 
           {websites.map((w, i) => {
-            const inner = (
+            // Destination: the live site if hosted, else a screenshot of the
+            // real build, else the in-portfolio demo page. Live builds and
+            // screenshots are external/static files, so they open in a new tab.
+            const external = w.live || w.shot;
+            const row = (
               <>
                 <span className="pf__index">{String(i + 1).padStart(2, '0')}</span>
                 <span className="pf__name">{w.text}</span>
-                <span className="pf__desc">{w.desc}</span>
+                <span className="pf__desc">
+                  {w.desc}
+                  {w.livePassword && (
+                    <span className="pf__pwrow">
+                      Password: <mark className="pf__pw">{w.livePassword}</mark>
+                    </span>
+                  )}
+                </span>
                 <span className="pf__tags">
                   {w.tags.map((t) => (
                     <span key={t} className="pf__tag">{t}</span>
@@ -50,44 +61,25 @@ const Home = () => {
                   {w.platform && (
                     <span className="pf__tag pf__tag--platform">{w.platform}</span>
                   )}
-                  {w.livePassword && (
-                    <span className="pf__tag pf__tag--pw">password: {w.livePassword}</span>
-                  )}
-                  {w.figma && (
-                    <a
-                      href={w.figma}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="pf__tag pf__tag--figma"
-                    >
-                      Figma
-                    </a>
-                  )}
                 </span>
                 <span className="pf__arrow">→</span>
               </>
             );
-            // Destination: the live site if hosted, else a screenshot of the
-            // real build, else the in-portfolio demo page. Live builds and
-            // screenshots are external/static files, so they open in a new tab.
-            const shot = (w as { shot?: string }).shot;
-            const external = w.live || shot;
             return external ? (
-              <div key={w.label} className="pf__row pf__row--split">
-                <a
-                  href={external}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="pf__row-hit"
-                  aria-label={`Open ${w.text}`}
-                />
-                {inner}
-              </div>
+              <a
+                key={w.label}
+                href={external}
+                target="_blank"
+                rel="noreferrer"
+                className="pf__row"
+                aria-label={`Open ${w.text}`}
+              >
+                {row}
+              </a>
             ) : (
-              <div key={w.label} className="pf__row pf__row--split">
-                <Link href={`/${w.label}`} className="pf__row-hit" aria-label={`Open ${w.text}`} />
-                {inner}
-              </div>
+              <Link key={w.label} href={`/${w.label}`} className="pf__row">
+                {row}
+              </Link>
             );
           })}
         </section>

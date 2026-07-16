@@ -123,7 +123,7 @@
 
 .pf__row {
   display: grid;
-  grid-template-columns: 48px minmax(140px, 1fr) minmax(0, 1.6fr) auto 26px;
+  grid-template-columns: 48px minmax(140px, 1fr) minmax(0, 1.6fr) 100px 26px;
   align-items: center;
   gap: 28px;
   padding: 26px 20px;
@@ -134,20 +134,6 @@
   position: relative;
   background: transparent;
   transition: background .3s, border-color .3s;
-}
-
-.pf__row--split > :not(.pf__row-hit) {
-  position: relative;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.pf__row-hit {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  border: 0;
-  text-decoration: none;
 }
 
 /* Hover only on devices with a real pointer (skip sticky touch hover). */
@@ -214,28 +200,21 @@
   border-color: var(--accent);
 }
 
-/* Dev-store password hint — dashed to read as info, not a category. */
-.pf__tag--pw {
-  text-transform: none;
-  letter-spacing: 0;
-  color: var(--accent, var(--text-1));
-  border-style: dashed;
+/* Dev-store password — own line under the description text. */
+.pf__pwrow {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 12px;
 }
 
-.pf__tag--figma:link,
-.pf__tag--figma:visited {
-  position: relative;
-  z-index: 3;
-  pointer-events: auto;
-  color: var(--accent);
-  border-color: var(--accent);
-  text-decoration: none;
-}
-
-.pf__tag--figma:hover,
-.pf__tag--figma:focus-visible {
+.pf__pw {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.92em;
   color: var(--bg);
   background: var(--accent);
+  border-radius: 3px;
+  padding: 1px 5px;
 }
 
 .pf__arrow {
@@ -244,6 +223,19 @@
   color: var(--faint);
   transform: translateX(0);
   transition: transform .3s, color .3s;
+}
+
+/* Percent columns once the 1080px container stops flexing — below this the
+ * ratio columns above keep the row from overflowing. Gap is folded into the
+ * track widths here so the five columns still sum to 100%. */
+@media (min-width: 1080px) {
+  .pf__row {
+    grid-template-columns: 5% 25% 50% 15% 5%;
+    gap: 0;
+  }
+  .pf__row > * + * {
+    padding-left: 28px;
+  }
 }
 
 /* Space between the Websites and Projects sections. */
@@ -313,11 +305,12 @@
   }
 }
 
-/* Mobile: stack the 5-col row into a readable block. */
-@media not all and (min-width: 640px) {
+/* Below 1024px: stack the 5-col row into a readable block. The desktop grid
+ * squeezes name + desc + tags too tightly once the container stops flexing. */
+@media not all and (min-width: 1024px) {
   .pf__row {
     grid-template-columns: auto 1fr;
-    gap: 6px 14px;
+    gap: 16px 14px;
     padding: 22px 4px;
   }
   .pf__index { grid-row: 1; }

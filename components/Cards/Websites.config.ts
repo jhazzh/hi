@@ -10,7 +10,7 @@ export const websites = [
         text: "Fern & Frame",
         label: "websites/fern-frame",
         desc: "E-commerce landing page for a fictional furniture brand — designed and built from scratch.",
-        tags: ["E-commerce", "Standalone"],
+        tags: ["E-commerce"],
         figma: "https://www.figma.com/design/cMmlOtXqVV925HJcdinUtP/Untitled?node-id=0-1&t=hlFbjVMIuG3faNYZ-1",
         live: "https://test-store-22982.myshopify.com/",
         // Dev store password can't be disabled; visitors need it to enter.
@@ -22,13 +22,24 @@ export const websites = [
         text: "Northbeam",
         label: "websites/northbeam",
         desc: "Digital agency landing page — bold type, services, process, and metrics.",
-        tags: ["Landing page", "Responsive"],
+        tags: ["Landing page"],
         figma: "https://www.figma.com/design/cMmlOtXqVV925HJcdinUtP/Untitled?node-id=0-1&t=hlFbjVMIuG3faNYZ-1",
         // Hosted on InfinityFree. See northbeam-wp/ for the WordPress theme.
         live: "https://astrox.rf.gd/wp/",
         livePassword: "",
         platform: "WordPress",
         shot: "/hi/websites/northbeam-wp-desktop.png",
+    },
+    {
+        text: "Volt Store",
+        label: "websites/volt-store",
+        desc: "Full e-commerce storefront — browse, filter, cart, auth, and checkout with persisted orders.",
+        tags: ["E-commerce", "Full-stack"],
+        figma: "",
+        live: "https://volt-store-theta.vercel.app",
+        livePassword: "",
+        platform: "Next.js",
+        shot: "",
     },
 ];
 
