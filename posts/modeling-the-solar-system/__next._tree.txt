@@ -1,5 +1,7 @@
-:HL["/hi/_next/static/chunks/0j90q2cq92bx2.css","style"]
+:HL["/hi/_next/static/chunks/35e3vx1z3_c6h.css","style"]
+:HL["/hi/_next/static/chunks/3oiq72mllolwi.css","style"]
+:HL["/hi/_next/static/chunks/0ih65fpgwpbla.css","style"]
 :HL["/hi/_next/static/chunks/22r_ma4hu0ekg.css","style"]
 :HL["/hi/theme.css","style"]
 :HL["https://cdn.sanity.io/images/uxm5o4n0/production/a57a53d17ebbea16c87e0419af37cd6e0eb4dea9-1408x768.jpg?w=2000&auto=format","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":20,"slots":{"children":{"name":"posts","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"modeling-the-solar-system","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"dHWepGc4C2JWUyo6B7XNh"}
+0:{"tree":{"name":"","param":null,"prefetchHints":20,"slots":{"children":{"name":"posts","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"modeling-the-solar-system","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"h0V5xL0Xvt1xtBuvfdm1g"}
