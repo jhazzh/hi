@@ -14,6 +14,23 @@
   padding: var(--wrapper-padding-inline);
 }
 
+/* Neon: keep page content above the fixed circuit canvas + vignette. */
+[data-theme="neon"] .page {
+  position: relative;
+  z-index: 2;
+}
+
+/* Neon: project pages each paint their own full-height `background: var(--bg)`
+ * slab. That's invisible when it matches the body, but here it would hide the
+ * circuit canvas — so drop it and let the canvas show through. The body keeps
+ * --bg as the base layer behind the canvas. */
+[data-theme="neon"] :is(
+  .calc-page, .pomo-page, .dm-page, .rec-page,
+  .wx-page, .i18n-page, .md-page, .av-page
+) {
+  background: transparent;
+}
+
 body {
   margin: 0;
   padding: 0;

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import SurgeLink from '../NeonCircuit/SurgeLink';
 import { cards } from '../Cards/Cards.config';
 import { websites } from '../Cards/Websites.config';
 import './Home.css';
@@ -90,7 +90,7 @@ const Home = () => {
                     aria-label={`Open ${w.text}`}
                   />
                 ) : (
-                  <Link
+                  <SurgeLink
                     href={`/${w.label}`}
                     className="pf__row-hit"
                     aria-label={`Open ${w.text}`}
@@ -109,7 +109,7 @@ const Home = () => {
           </div>
 
           {cards.map((c, i) => (
-            <Link key={c.label} href={`/${c.label}`} className="pf__row">
+            <SurgeLink key={c.label} href={`/${c.label}`} className="pf__row">
               <span className="pf__index">{String(i + 1).padStart(2, '0')}</span>
               <span className="pf__name">{c.text}</span>
               <span className="pf__desc">{c.desc}</span>
@@ -119,7 +119,7 @@ const Home = () => {
                 ))}
               </span>
               <span className="pf__arrow">→</span>
-            </Link>
+            </SurgeLink>
           ))}
         </section>
 

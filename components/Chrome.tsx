@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import ScrollToTop from "./ScrollToTop";
 import BackToTop from "./BackToTop/BackToTop";
 import ThemeToggle from "./ThemeToggle/ThemeToggle";
+import NeonCircuit from "./NeonCircuit/NeonCircuit";
 import ProjectFrame from "./ProjectFrame/ProjectFrame";
 import { cards } from "./Cards/Cards.config";
 import type { ReactNode } from "react";
@@ -60,6 +61,7 @@ export default function Chrome({ children }: { children: ReactNode }) {
 
   return (
     <>
+      <NeonCircuit />
       {content}
       <ScrollToTop />
       <BackToTop />

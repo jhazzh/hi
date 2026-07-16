@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Set the theme before first paint (dark default) to avoid a flash. */}
+        {/* Set the theme before first paint (neon default) to avoid a flash. */}
         <Script id="theme-init" strategy="beforeInteractive">
-          {"(function(){try{var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t==='light'||t==='dark'?t:'dark');}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();"}
+          {"(function(){try{var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t==='light'||t==='dark'||t==='neon'?t:'neon');}catch(e){document.documentElement.setAttribute('data-theme','neon');}})();"}
         </Script>
         <Script
           src="https://kit.fontawesome.com/23cc219af3.js"

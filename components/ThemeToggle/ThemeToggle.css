@@ -1,9 +1,12 @@
-.theme-toggle {
+/* Fixed wrapper so the dropdown anchors to the button. */
+.theme-menu {
   position: fixed;
   top: 24px;
   right: 24px;
   z-index: 60;
+}
 
+.theme-toggle {
   width: 40px;
   height: 40px;
   border-radius: 999px;
@@ -27,6 +30,72 @@
   transform: translateY(-1px);
 }
 
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+[data-theme="neon"] .theme-toggle {
+  box-shadow: 0 0 14px rgba(57, 255, 139, .3);
+}
+
+/* Dropdown */
+.theme-menu__list {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 132px;
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  /* Opaque: --surface is translucent in neon, which would let the circuit
+   * canvas show through the menu text. */
+  background: var(--bg);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .05), 0 14px 32px -12px rgba(0, 0, 0, .45);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+[data-theme="neon"] .theme-menu__list {
+  box-shadow: 0 0 18px rgba(57, 255, 139, .22);
+}
+
+.theme-menu__item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text-2);
+  font-family: inherit;
+  font-size: 13.5px;
+  text-align: left;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+
+.theme-menu__item:hover,
+.theme-menu__item:focus-visible {
+  background: var(--surface-2);
+  color: var(--text);
+  outline: none;
+}
+
+.theme-menu__item.is-active {
+  color: var(--accent);
+}
+
+.theme-menu__icon {
+  width: 17px;
+  font-size: 15px;
+  line-height: 1;
+  text-align: center;
+}
+
 @media print {
-  .theme-toggle { display: none !important; }
+  .theme-menu { display: none !important; }
 }

@@ -11,6 +11,13 @@
   transition: background-color .3s ease, color .3s ease;
 }
 
+/* Neon: let the circuit canvas show through, and sit above it. */
+[data-theme="neon"] .pfr {
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
 .pfr__inner {
   max-width: 1080px;
   margin: 0 auto;
