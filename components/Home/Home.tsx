@@ -53,6 +53,18 @@ const Home = () => {
                       Password: <mark className="pf__pw">{w.livePassword}</mark>
                     </span>
                   )}
+                  {w.figma && (
+                    <span className="pf__pwrow">
+                      <a
+                        href={w.figma}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="pf__figma"
+                      >
+                        Figma
+                      </a>
+                    </span>
+                  )}
                 </span>
                 <span className="pf__tags">
                   {w.tags.map((t) => (
@@ -65,21 +77,27 @@ const Home = () => {
                 <span className="pf__arrow">→</span>
               </>
             );
-            return external ? (
-              <a
-                key={w.label}
-                href={external}
-                target="_blank"
-                rel="noreferrer"
-                className="pf__row"
-                aria-label={`Open ${w.text}`}
-              >
+            // Split row: the Figma link can't nest inside a row-wide anchor, so
+            // the row is a div with an absolutely-positioned hit area instead.
+            return (
+              <div key={w.label} className="pf__row pf__row--split">
+                {external ? (
+                  <a
+                    href={external}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="pf__row-hit"
+                    aria-label={`Open ${w.text}`}
+                  />
+                ) : (
+                  <Link
+                    href={`/${w.label}`}
+                    className="pf__row-hit"
+                    aria-label={`Open ${w.text}`}
+                  />
+                )}
                 {row}
-              </a>
-            ) : (
-              <Link key={w.label} href={`/${w.label}`} className="pf__row">
-                {row}
-              </Link>
+              </div>
             );
           })}
         </section>

@@ -136,6 +136,22 @@
   transition: background .3s, border-color .3s;
 }
 
+/* Split row: content sits above the full-row hit area, and is click-through
+ * so the row still opens — except the Figma link, which re-enables clicks. */
+.pf__row--split > :not(.pf__row-hit) {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.pf__row-hit {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border: 0;
+  text-decoration: none;
+}
+
 /* Hover only on devices with a real pointer (skip sticky touch hover). */
 @media (hover: hover) {
   .pf__row:hover {
@@ -215,6 +231,22 @@
   background: var(--accent);
   border-radius: 3px;
   padding: 1px 5px;
+}
+
+/* Figma link — clickable on its own, above the row's hit area. */
+.pf__figma:link,
+.pf__figma:visited {
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.pf__figma:hover,
+.pf__figma:focus-visible {
+  color: var(--text);
 }
 
 .pf__arrow {
