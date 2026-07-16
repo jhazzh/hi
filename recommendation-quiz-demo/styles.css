@@ -46,7 +46,6 @@ body {
 .view.is-active { display: block; }
 
 .site-header {
-  max-width: 720px;
   margin: 0 auto 18px;
   display: flex;
   justify-content: space-between;
@@ -82,7 +81,6 @@ body {
 }
 
 .nav {
-  max-width: 720px;
   margin: 0 auto 20px;
   display: flex;
   gap: 8px;
@@ -106,7 +104,6 @@ body {
 
 .quiz {
   width: 100%;
-  max-width: 480px;
   margin: 0 auto;
   background: var(--card);
   border: 1px solid var(--border);
@@ -117,7 +114,6 @@ body {
 
 /* --- Admin --- */
 .admin {
-  max-width: 720px;
   margin: 0 auto;
 }
 
@@ -164,6 +160,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 10px;
   margin-bottom: 12px;
+  overflow: auto;
 }
 
 .options-edit {
@@ -287,4 +284,8 @@ body {
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
+}
+
+#admin-products {
+  overflow: auto;
 }

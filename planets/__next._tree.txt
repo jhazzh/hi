@@ -3,4 +3,4 @@
 :HL["/hi/_next/static/chunks/0ih65fpgwpbla.css","style"]
 :HL["/hi/_next/static/chunks/22r_ma4hu0ekg.css","style"]
 :HL["/hi/theme.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":20,"slots":{"children":{"name":"planets","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"h0V5xL0Xvt1xtBuvfdm1g"}
+0:{"tree":{"name":"","param":null,"prefetchHints":20,"slots":{"children":{"name":"planets","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"E0L_lC185roGNA1H7F4wl"}
