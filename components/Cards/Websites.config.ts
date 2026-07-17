@@ -7,6 +7,17 @@
 // Row link priority (see Home.tsx): live → shot → in-portfolio demo page.
 export const websites = [
     {
+        text: "Volt Store",
+        label: "websites/volt-store",
+        desc: "Full e-commerce storefront — browse, filter, cart, auth, and checkout with persisted orders.",
+        tags: ["E-commerce", "Full-stack"],
+        figma: "",
+        live: "https://volt-store-theta.vercel.app",
+        livePassword: "",
+        platform: "Next.js",
+        shot: "",
+    },
+    {
         text: "Fern & Frame",
         label: "websites/fern-frame",
         desc: "E-commerce landing page for a fictional furniture brand — designed and built from scratch.",
@@ -29,17 +40,6 @@ export const websites = [
         livePassword: "",
         platform: "WordPress",
         shot: "/hi/websites/northbeam-wp-desktop.png",
-    },
-    {
-        text: "Volt Store",
-        label: "websites/volt-store",
-        desc: "Full e-commerce storefront — browse, filter, cart, auth, and checkout with persisted orders.",
-        tags: ["E-commerce", "Full-stack"],
-        figma: "",
-        live: "https://volt-store-theta.vercel.app",
-        livePassword: "",
-        platform: "Next.js",
-        shot: "",
     },
 ];
 
